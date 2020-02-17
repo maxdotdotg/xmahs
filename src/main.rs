@@ -15,14 +15,14 @@ fn main() {
         // decrement loop for gifts
         let mut gift_counter = days;
         while gift_counter >= 0 {
-            println!("{}", gifts(gift_counter));
+            println!("{}", gifts(&gift_counter));
             gift_counter -= 1;
         }
         days += 1;
     }
 }
 
-fn gifts(x: i32) -> &'static str {
+fn gifts(x: &i32) -> &str {
     // static because str value is unknown at runtime/can change?
     // https://doc.rust-lang.org/rust-by-example/scope/lifetime/static_lifetime.html
     // compiler, yo 
